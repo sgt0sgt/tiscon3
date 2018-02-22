@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>確認画面</title>
+</head>
+<body>
+
+<div class="full height image" layout:fragment="content">
+    <div class="ui main container">
+        <div class="ui information container">
+            <div class="ui middle center aligned grid">
+                <div class="center column">
+                    <div class="ui segment metrixir">
+                        <h1 class="ui aligned header teal">確認画面</h1>
+                        <form class="ui form" method="post" action="/cardOrder/">
+
+
+                            <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
+                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_f}"/>
+                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_l}"/>
+                            <input type="hidden" name="kanaName" th:value="${form.kanaName_f}"/>
+                            <input type="hidden" name="kanaName" th:value="${form.kanaName_l}"/>
+                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_l}"/>
+                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_f}"/>
+                            <input type="hidden" name="gender" th:value="${form.gender}"/>
+                            <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
+                            <input type="hidden" name="zipCode" th:value="${form.zipCode}"/>
+                            <input type="hidden" name="address" th:value="${form.address}"/>
+                            <input type="hidden" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
+                            <input type="hidden" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+                            <input type="hidden" name="emailAddress" th:value="${form.emailAddress}"/>
+                            <input type="hidden" name="spouse" th:value="${form.spouse}"/>
+                            <input type="hidden" name="houseClassification" th:value="${form.houseClassification}"/>
+                            <input type="hidden" name="debt" th:value="${form.debt}"/>
+                            <input type="hidden" name="income" th:value="${form.income}"/>
+                            <input type="hidden" name="job" th:value="${form.job}"/>
+
+
+                            <div class="ui column grid">
+                                <div class="eight wide column left aligned">
+                                    <!--/*戻る場合、formの送り先を強制的に書き換える*/-->
+                                    <button class="ui button angle left icon" onclick="form.action='/cardOrder/modify';return true">戻る</button>
+                                </div>
+                                <div class="eight wide column right aligned">
+                                    <button class="ui teal button angle right icon">カードを申し込む</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -17,7 +17,7 @@
                     <div class="ui segment metrixir">
                         <h1 class="ui aligned header teal">お申込み情報</h1>
 
-                        <form class="ui form" method="post" action="/cardOrder/">
+                        <form class="ui form" method="post" action="/cardOrder/conf">
 
                             <!-- /*エラーがあれば表示する*/ -->
                             <ul class="ui red basic label" th:if="${form.hasErrors()}">
@@ -25,6 +25,8 @@
                             </ul>
 
                             <div class="ui horizontal divider">お勤め先について</div>
+
+
 
                             <div class="ui statement">ご職業が「経営・自営業」、「会社員」、「契約・派遣社員」、「公務員」、「民間団体」、「その他（有職）」の方は、以下の項目をご入力ください。</div>
 
@@ -88,9 +90,9 @@
                             </div>
 
                             <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
-                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName}"/>
-                            <input type="hidden" name="kanaName" th:value="${form.kanaName}"/>
-                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName}"/>
+                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_f}"/>
+                            <input type="hidden" name="kanaName" th:value="${form.kanaName_f}"/>
+                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_f}"/>
                             <input type="hidden" name="gender" th:value="${form.gender}"/>
                             <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
                             <input type="hidden" name="zipCode" th:value="${form.zipCode}"/>
@@ -103,6 +105,10 @@
                             <input type="hidden" name="debt" th:value="${form.debt}"/>
                             <input type="hidden" name="income" th:value="${form.income}"/>
                             <input type="hidden" name="job" th:value="${form.job}"/>
+                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_l}"/>
+                            <input type="hidden" name="kanaName" th:value="${form.kanaName_l}"/>
+                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_l}"/>
+
 
                             <div class="ui column grid">
                                 <div class="eight wide column left aligned">
@@ -110,7 +116,7 @@
                                     <button class="ui button angle left icon" onclick="form.action='/cardOrder/modify';return true">戻る</button>
                                 </div>
                                 <div class="eight wide column right aligned">
-                                    <button class="ui teal button angle right icon">カードを申し込む</button>
+                                    <button class="ui teal button angle right icon">確認画面へ</button>
                                 </div>
                             </div>
                         </form>

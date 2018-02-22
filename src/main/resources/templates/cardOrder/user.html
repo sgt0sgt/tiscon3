@@ -26,18 +26,42 @@
 
                             <div class="ui horizontal divider">ご本人について</div>
 
-                            <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
-                                <label>お名前（漢字）</label>
-                                <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                            <div class="field" th:classappend="${form.hasErrors('kanjiName_l')} ? 'error'">
+                                <label>姓（漢字）</label>
+                                <input type="text" name="kanjiName_l" th:value="${form.kanjiName_l}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
-                                <label>お名前（カナ）</label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+
+                            <!--書き足し-->
+                            <div class="field" th:classappend="${form.hasErrors('kanjiName_f')} ? 'error'">
+                                <label>名（漢字）</label>
+                                <input type="text" name="kanjiName_f" th:value="${form.kanjiName_f}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
-                                <label>お名前（ローマ字）</label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                            <!--書き足し-->
+
+                            <div class="field" th:classappend="${form.hasErrors('kanaName_l')} ? 'error'">
+                                <label>姓（カナ）</label>
+                                <input type="text" name="kanaName_l" th:value="${form.kanaName_l}"/>
                             </div>
+
+                            <!--書き足し-->
+                            <div class="field" th:classappend="${form.hasErrors('kanaName_f')} ? 'error'">
+                                <label>名（カナ）</label>
+                                <input type="text" name="kanaName_f" th:value="${form.kanaName_f}"/>
+                            </div>
+                            <!--書き足し-->
+
+                            <div class="field" th:classappend="${form.hasErrors('alphabetName_l')} ? 'error'">
+                                <label>姓（ローマ字）</label>
+                                <input type="text" name="alphabetName_l" th:value="${form.alphabetName_l}"/>
+                            </div>
+
+                            <!--書き足し-->
+                            <div class="field" th:classappend="${form.hasErrors('alphabetName_f')} ? 'error'">
+                                <label>名（ローマ字）</label>
+                                <input type="text" name="alphabetName_f" th:value="${form.alphabetName_f}"/>
+                            </div>
+                            <!--書き足し-->
+
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
