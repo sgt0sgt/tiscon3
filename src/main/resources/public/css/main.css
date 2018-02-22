@@ -53,6 +53,16 @@ ul.label {
     vertical-align: middle !important;
     width: 100px !important;
 }
+.number2 {
+    text-align: left;
+    vertical-align: middle !important;
+    width: 100px !important;
+}
+
+.number3 {
+    display: inline-block !important;
+    width: 100px !important;
+}
 
 .unit {
     vertical-align: middle;
