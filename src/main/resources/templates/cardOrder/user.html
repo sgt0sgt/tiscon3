@@ -28,25 +28,169 @@
 
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
                                 <label>お名前（漢字）</label>
-                                <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                <input type="text" class="number2" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
+                                <input type="text" class="number2" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）</label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                <input type="text" class="number2" name="kanaName_L" th:value="${form.kanaName_L}"/>
+                                <input type="text" class="number2" name="kanaName_F" th:value="${form.kanaName_F}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
                                 <label>お名前（ローマ字）</label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                <input type="text" class="number2" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
+                                <input type="text" class="number2" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
+
+
+
+                            <div class=" field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日</label>
-                                <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
+
+
+
+
+
+                                <select name="birth_y" class="number3" lang="ja" style="background-color: rgb(255, 255, 255);"><option value="3003">1928年(昭和3年)</option>
+                                    <option value="3004">1929年(昭和4年)</option>
+                                    <option value="3005">1930年(昭和5年)</option>
+                                    <option value="3006">1931年(昭和6年)</option>
+                                    <option value="3007">1932年(昭和7年)</option>
+                                    <option value="3008">1933年(昭和8年)</option>
+                                    <option value="3009">1934年(昭和9年)</option>
+                                    <option value="3010">1935年(昭和10年)</option>
+                                    <option value="3011">1936年(昭和11年)</option>
+                                    <option value="3012">1937年(昭和12年)</option>
+                                    <option value="3013">1938年(昭和13年)</option>
+                                    <option value="3014">1939年(昭和14年)</option>
+                                    <option value="3015">1940年(昭和15年)</option>
+                                    <option value="3016">1941年(昭和16年)</option>
+                                    <option value="3017">1942年(昭和17年)</option>
+                                    <option value="3018">1943年(昭和18年)</option>
+                                    <option value="3019">1944年(昭和19年)</option>
+                                    <option value="3020">1945年(昭和20年)</option>
+                                    <option value="3021">1946年(昭和21年)</option>
+                                    <option value="3022">1947年(昭和22年)</option>
+                                    <option value="3023">1948年(昭和23年)</option>
+                                    <option value="3024">1949年(昭和24年)</option>
+                                    <option value="3025">1950年(昭和25年)</option>
+                                    <option value="3026">1951年(昭和26年)</option>
+                                    <option value="3027">1952年(昭和27年)</option>
+                                    <option value="3028">1953年(昭和28年)</option>
+                                    <option value="3029">1954年(昭和29年)</option>
+                                    <option value="3030">1955年(昭和30年)</option>
+                                    <option value="3031">1956年(昭和31年)</option>
+                                    <option value="3032">1957年(昭和32年)</option>
+                                    <option value="3033">1958年(昭和33年)</option>
+                                    <option value="3034">1959年(昭和34年)</option>
+                                    <option value="3035">1960年(昭和35年)</option>
+                                    <option value="3036">1961年(昭和36年)</option>
+                                    <option value="3037">1962年(昭和37年)</option>
+                                    <option value="3038">1963年(昭和38年)</option>
+                                    <option value="3039">1964年(昭和39年)</option>
+                                    <option value="3040">1965年(昭和40年)</option>
+                                    <option value="3041">1966年(昭和41年)</option>
+                                    <option value="3042">1967年(昭和42年)</option>
+                                    <option value="3043">1968年(昭和43年)</option>
+                                    <option value="3044">1969年(昭和44年)</option>
+                                    <option value="3045">1970年(昭和45年)</option>
+                                    <option value="3046">1971年(昭和46年)</option>
+                                    <option value="3047">1972年(昭和47年)</option>
+                                    <option value="3048">1973年(昭和48年)</option>
+                                    <option value="3049">1974年(昭和49年)</option>
+                                    <option value="3050">1975年(昭和50年)</option>
+                                    <option value="3051">1976年(昭和51年)</option>
+                                    <option value="3052">1977年(昭和52年)</option>
+                                    <option value="3053">1978年(昭和53年)</option>
+                                    <option value="3054">1979年(昭和54年)</option>
+                                    <option value="3055">1980年(昭和55年)</option>
+                                    <option value="3056">1981年(昭和56年)</option>
+                                    <option value="3057">1982年(昭和57年)</option>
+                                    <option value="3058">1983年(昭和58年)</option>
+                                    <option value="3059">1984年(昭和59年)</option>
+                                    <option value="3060">1985年(昭和60年)</option>
+                                    <option value="3061">1986年(昭和61年)</option>
+                                    <option value="3062">1987年(昭和62年)</option>
+                                    <option value="3063">1988年(昭和63年)</option>
+                                    <option value="3064">1989年(昭和64年)</option>
+                                    <option value="4001">1989年(平成1年)</option>
+                                    <option value="" selected="selected">▼選択してください</option>
+                                    <option value="4002">1990年(平成2年)</option>
+                                    <option value="4003">1991年(平成3年)</option>
+                                    <option value="4004">1992年(平成4年)</option>
+                                    <option value="4005">1993年(平成5年)</option>
+                                    <option value="4006">1994年(平成6年)</option>
+                                    <option value="4007">1995年(平成7年)</option>
+                                    <option value="4008">1996年(平成8年)</option>
+                                    <option value="4009">1997年(平成9年)</option>
+                                    <option value="4010">1998年(平成10年)</option>
+                                    <option value="4011">1999年(平成11年)</option>
+                                    <option value="4012">2000年(平成12年)</option></select>
+                                年
+
+
+                                <select name="birth_m" class="number3" lang="ja" style="background-color: rgb0, 0, 0);"><option value="" selected="selected">-</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option></select>
+                                月
+
+
+                                <select name="birth_d" class="number3" lang="ja" style="background-color: rgb(255, 255, 255);"><option value="" selected="selected">-</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option></select>
+                                日
+
+
+
+
                             </div>
+
+
+
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号</label>
                                 <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
@@ -57,15 +201,17 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('homePhoneNumber')} ? 'error'">
                                 <label>自宅電話番号</label>
-                                <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
+                                <input type="text" class="number2" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
+                                -<input type="text" class="number2"/>-<input type="text" class="number2"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber')} ? 'error'">
                                 <label>携帯電話番号</label>
-                                <input type="text" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+                                <input type="text" class="number2" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>-<input type="text" class="number2"/>-<input type="text" class="number2"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
                                 <label>メールアドレス</label>
-                                <input type="text" name="emailAddress" th:value="${form.emailAddress}"/>
+                                <input type="text" class="number2" name="emailAddress" th:value="${form.emailAddress}"/>@
+                                <input type="text"  class="number2" name="emailAddress2" th:value="${form.emailAddress2}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('spouse')} ? 'error'">
                                 <label>配偶者有無</label>
