@@ -28,6 +28,7 @@
 
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
                                 <label>お名前（漢字）</label>
+                                <p th:text="${form.getErrors('kanjiName')}" th:if="${form.hasErrors('kanjiName')}"></p>
                                 <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
