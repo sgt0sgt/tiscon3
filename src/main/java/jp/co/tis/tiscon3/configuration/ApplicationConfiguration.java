@@ -25,9 +25,14 @@ public class ApplicationConfiguration implements enkan.config.ApplicationFactory
             r.get("/").to(IndexController.class, "index");
             r.get("/cardOrder/user").to(CardOrderController.class, "inputUser");
             r.post("/cardOrder/user").to(CardOrderController.class, "inputJob");
+
             r.post("/cardOrder/conf").to(CardOrderController.class, "conf");
+          /*  r.get("/cardOrder/conf").to(CardOrderController.class, "conf");*/
+
             r.post("/cardOrder/modify").to(CardOrderController.class, "modifyUser");
-            r.get("/cardOrder/completed").to(CardOrderController.class, "completed");
+           r.get("/cardOrder/completed").to(CardOrderController.class, "completed");
+           /* r.post("/cardOrder/completed").to(CardOrderController.class, "completed");*/
+
             r.resource(CardOrderController.class);
         }).compile();
 

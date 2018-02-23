@@ -71,7 +71,7 @@ public class CardOrderController {
         return templateEngine.render("cardOrder/user", "form", form);
     }
 
-
+/*
     /**
      * 確認ページを表示します.
      *
@@ -85,6 +85,12 @@ public class CardOrderController {
 
         return templateEngine.render("cardOrder/conf", "form", form);
     }
+
+
+ /*   public HttpResponse conf() {
+        return templateEngine.render("cardOrder/conf");
+    } */
+
 
     /**
      * カード申し込み情報をDatabaseに登録します.
@@ -100,16 +106,32 @@ public class CardOrderController {
 
         cardOrderDao.insert(cardOrder);
 
+    /*    return redirect(getClass(), "conf", SEE_OTHER); */
         return redirect(getClass(), "completed", SEE_OTHER);
     }
 
+
+
+/*
     /**
      * 完了ページを表示します.
      *
      * @return 完了ページresponse
      */
+
+
     public HttpResponse completed() {
         return templateEngine.render("cardOrder/completed");
     }
+
+
+/*
+    public HttpResponse completed(CardOrderForm form) {
+        System.out.println("完了ページ");
+        // エラーを出したくないので強制的にエラーを消す.
+        form.setErrors(null);
+        return templateEngine.render("cardOrder/completed", "form", form);
+    }
+    */
 
 }
