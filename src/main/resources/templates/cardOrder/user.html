@@ -26,17 +26,20 @@
 
                             <div class="ui horizontal divider">ご本人について</div>
 
-                            <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('kanjiName_L')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('kanjiName_F')} ? 'error'">
                                 <label>お名前（漢字）</label>
                                 <input type="text" class="number2" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
                                 <input type="text" class="number2" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('kanaName_L')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('kanaName_F')} ? 'error'">
                                 <label>お名前（カナ）</label>
                                 <input type="text" class="number2" name="kanaName_L" th:value="${form.kanaName_L}"/>
                                 <input type="text" class="number2" name="kanaName_F" th:value="${form.kanaName_F}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('alphabetName_L')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('alphabetName_F')} ? 'error'">
                                 <label>お名前（ローマ字）</label>
                                 <input type="text" class="number2" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
                                 <input type="text" class="number2" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
@@ -213,15 +216,23 @@
                                 <label>ご住所</label>
                                 <input type="text" name="address" th:value="${form.address}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('homePhoneNumber')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_1')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_2')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_3')} ? 'error'">
                                 <label>自宅電話番号</label>
-                                <input type="text" class="number2" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
-                                -<input type="text" class="number2"/>-<input type="text" class="number2"/>
+                                <input type="text" class="number2" name="homePhoneNumber_1" th:value="${form.homePhoneNumber_1}"/>-
+                                <input type="text" class="number2" name="homePhoneNumber_2" th:value="${form.homePhoneNumber_2}"/>-
+                                <input type="text" class="number2" name="homePhoneNumber_3" th:value="${form.homePhoneNumber_3}"/>
                             </div>
-                            <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber_1')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber_2')} ? 'error'">
+                                <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber_3')} ? 'error'">
                                 <label>携帯電話番号</label>
-                                <input type="text" class="number2" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>-<input type="text" class="number2"/>-<input type="text" class="number2"/>
+                                <input type="text" class="number2" name="mobilePhoneNumber_1" th:value="${form.mobilePhoneNumber_1}"/>-
+                                <input type="text" class="number2" name="mobilePhoneNumber_2" th:value="${form.mobilePhoneNumber_2}"/>-
+                                <input type="text" class="number2" name="mobilePhoneNumber_3" th:value="${form.mobilePhoneNumber_3}"/>
                             </div>
+                            <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
                                 <label>メールアドレス</label>
                                 <input type="text" class="number2" name="emailAddress" th:value="${form.emailAddress}"/>@
