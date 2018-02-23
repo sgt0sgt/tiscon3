@@ -88,12 +88,16 @@
                             </div>
 
                             <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
-                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_F}"/>
-                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_L}"/>
-                            <input type="hidden" name="kanaName" th:value="${form.kanaName_L}"/>
-                            <input type="hidden" name="kanaName" th:value="${form.kanaName_F}"/>
-                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_F}"/>
-                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_L}"/>
+                            <input type="hidden" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
+                            <input type="hidden" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
+                            <input type="hidden" name="kanaName_L" th:value="${form.kanaName_L}"/>
+                            <input type="hidden" name="kanaName_F" th:value="${form.kanaName_F}"/>
+                            <input type="hidden" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
+                            <input type="hidden" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
+                            <input type="hidden" name="birth_y" th:value="${form.birth_y}"/>
+                            <input type="hidden" name="birth_m" th:value="${form.birth_m}"/>
+                            <input type="hidden" name="birth_d" th:value="${form.birth_d}"/>
+
                             <input type="hidden" name="gender" th:value="${form.gender}"/>
                             <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
 

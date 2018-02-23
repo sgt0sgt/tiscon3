@@ -36,10 +36,18 @@ public class CardOrderForm extends FormBase {
     @Pattern(regexp = "^[a-zA-Z 　]*$")
     private String alphabetName_F;
 
+
+
     @NotBlank
     @Size(max = 10)
     @Pattern(regexp = "\\d{4}/\\d{1,2}/\\d{1,2}$")
     private String dateOfBirth;
+
+
+
+    private String birth_y;
+    private String birth_m;
+    private String birth_d;
 
     @NotBlank
     @Size(max = 6)
