@@ -71,6 +71,21 @@ public class CardOrderController {
         return templateEngine.render("cardOrder/user", "form", form);
     }
 
+
+    /**
+     * 確認ページを表示します.
+     *
+     * @return 確認ページresponse
+     */
+
+    public HttpResponse conf(CardOrderForm form) {
+        System.out.println("確認へ");
+        // エラーを出したくないので強制的にエラーを消す.
+        form.setErrors(null);
+
+        return templateEngine.render("cardOrder/conf", "form", form);
+    }
+
     /**
      * カード申し込み情報をDatabaseに登録します.
      *

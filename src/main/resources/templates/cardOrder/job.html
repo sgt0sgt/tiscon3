@@ -101,12 +101,14 @@
                             <input type="hidden" name="gender" th:value="${form.gender}"/>
                             <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
 
-
-
                             <input type="hidden" name="zipCode" th:value="${form.zipCode}"/>
                             <input type="hidden" name="address" th:value="${form.address}"/>
-                            <input type="hidden" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
-                            <input type="hidden" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+                            <input type="hidden" name="homePhoneNumber_1" th:value="${form.homePhoneNumber_1}"/>
+                            <input type="hidden" name="homePhoneNumber_2" th:value="${form.homePhoneNumber_2}"/>
+                            <input type="hidden" name="homePhoneNumber_3" th:value="${form.homePhoneNumber_3}"/>
+                            <input type="hidden" name="mobilePhoneNumber_1" th:value="${form.mobilePhoneNumber_1}"/>
+                            <input type="hidden" name="mobilePhoneNumber_2" th:value="${form.mobilePhoneNumber_2}"/>
+                            <input type="hidden" name="mobilePhoneNumber_3" th:value="${form.mobilePhoneNumber_3}"/>
                             <input type="hidden" name="emailAddress" th:value="${form.emailAddress}"/>
                             <input type="hidden" name="emailAddress2" th:value="${form.emailAddress2}"/>
                             <input type="hidden" name="spouse" th:value="${form.spouse}"/>
@@ -115,13 +117,15 @@
                             <input type="hidden" name="income" th:value="${form.income}"/>
                             <input type="hidden" name="job" th:value="${form.job}"/>
 
+
+
                             <div class="ui column grid">
                                 <div class="eight wide column left aligned">
                                     <!--/*戻る場合、formの送り先を強制的に書き換える*/-->
                                     <button class="ui button angle left icon" onclick="form.action='/cardOrder/modify';return true">戻る</button>
                                 </div>
                                 <div class="eight wide column right aligned">
-                                    <button class="ui teal button angle right icon">カードを申し込む</button>
+                                    <button class="ui teal button angle right icon">確認画面へ</button>
                                 </div>
                             </div>
                         </form>
