@@ -21,39 +21,52 @@
 
                             <!-- /*エラーがあれば表示する*/ -->
                             <ul class="ui red basic label" th:if="${form.hasErrors()}">
-                                <li th:each="error : ${form.getErrors().entrySet()}" th:text="${error.value}"></li>
+                                <li th:text="エラーがあります"></li>
                             </ul>
 
                             <div class="ui horizontal divider">ご本人について</div>
 
                             <div class="field" th:classappend="${form.hasErrors('kanjiName_L')} ? 'error'">
                             <div class="field" th:classappend="${form.hasErrors('kanjiName_F')} ? 'error'">
-                                <label>お名前（漢字）</label>
-                                <input type="text" class="number2" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
-                                <input type="text" class="number2" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
+                                <label>お名前（漢字）（例）山田　太郎</label>
+                                <p th:text="${form.getErrors('kanjiName_L')}" th:if="${form.hasErrors('kanjiName_L')}"></p>
+                                <p th:text="${form.getErrors('kanjiName_F')}" th:if="${form.hasErrors('kanjiName_F')}"></p>
+                                姓<input type="text" class="number2" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
+                                名<input type="text" class="number2" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName_L')} ? 'error'">
                             <div class="field" th:classappend="${form.hasErrors('kanaName_F')} ? 'error'">
-                                <label>お名前（カナ）</label>
-                                <input type="text" class="number2" name="kanaName_L" th:value="${form.kanaName_L}"/>
-                                <input type="text" class="number2" name="kanaName_F" th:value="${form.kanaName_F}"/>
+                                <label>お名前（カナ）（例）ヤマダ　タロウ</label>
+                                <p th:text="${form.getErrors('kanaName_L')}" th:if="${form.hasErrors('kanaName_L')}"></p>
+                                <p th:text="${form.getErrors('kanaName_F')}" th:if="${form.hasErrors('kanaName_F')}"></p>
+                                姓<input type="text" class="number2" name="kanaName_L" th:value="${form.kanaName_L}"/>
+                                名<input type="text" class="number2" name="kanaName_F" th:value="${form.kanaName_F}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName_L')} ? 'error'">
                             <div class="field" th:classappend="${form.hasErrors('alphabetName_F')} ? 'error'">
-                                <label>お名前（ローマ字）</label>
-                                <input type="text" class="number2" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
-                                <input type="text" class="number2" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
+                                <label>お名前（ローマ字）（例）TAROU YAMADA</label>
+                                <p th:text="${form.getErrors('alphabetName_L')}" th:if="${form.hasErrors('alphabetName_L')}"></p>
+                                <p th:text="${form.getErrors('alphabetName_F')}" th:if="${form.hasErrors('alphabetName_F')}"></p>
+                                名<input type="text" class="number2" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
+                                姓<input type="text" class="number2" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
                             </div>
 
 
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
+                                <p th:text="${form.getErrors('gender')}" th:if="${form.hasErrors('gender')}"></p>
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
+<!--
+                            <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
+                                    <label>生年月日</label>
+                                    <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
+                                    -->
 
 
 
+                                <div class=" field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                             <div class=" field" >
                                 <label>生年月日</label>
 
@@ -197,16 +210,21 @@
 
 
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
-                                <label>郵便番号</label>
+                                <label>郵便番号（例）123-4567</label>
+                                <p th:text="${form.getErrors('zipCode')}" th:if="${form.hasErrors('zipCode')}"></p>
                                 <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('address')} ? 'error'">
                                 <label>ご住所</label>
+                                <p th:text="${form.getErrors('address')}" th:if="${form.hasErrors('address')}"></p>
                                 <input type="text" name="address" th:value="${form.address}"/>
                             </div>
                                 <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_1')} ? 'error'">
                                 <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_2')} ? 'error'">
                                 <div class="field" th:classappend="${form.hasErrors('homePhoneNumber_3')} ? 'error'">
+                                    <p th:text="${form.getErrors('homePhoneNumber_1')}" th:if="${form.hasErrors('homePhoneNumber_1')}"></p>
+                                    <p th:text="${form.getErrors('homePhoneNumber_2')}" th:if="${form.hasErrors('homePhoneNumber_2')}"></p>
+                                    <p th:text="${form.getErrors('homePhoneNumber_3')}" th:if="${form.hasErrors('homePhoneNumber_3')}"></p>
                                 <label>自宅電話番号</label>
                                 <input type="text" class="number2" name="homePhoneNumber_1" th:value="${form.homePhoneNumber_1}"/>-
                                 <input type="text" class="number2" name="homePhoneNumber_2" th:value="${form.homePhoneNumber_2}"/>-
@@ -216,23 +234,30 @@
                                 <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber_2')} ? 'error'">
                                 <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber_3')} ? 'error'">
                                 <label>携帯電話番号</label>
+                                    <p th:text="${form.getErrors('mobilePhoneNumber_1')}" th:if="${form.hasErrors('mobilePhoneNumber_1')}"></p>
+                                    <p th:text="${form.getErrors('mobilePhoneNumber_2')}" th:if="${form.hasErrors('mobilePhoneNumber_2')}"></p>
+                                    <p th:text="${form.getErrors('mobilePhoneNumber_3')}" th:if="${form.hasErrors('mobilePhoneNumber_3')}"></p>
                                 <input type="text" class="number2" name="mobilePhoneNumber_1" th:value="${form.mobilePhoneNumber_1}"/>-
                                 <input type="text" class="number2" name="mobilePhoneNumber_2" th:value="${form.mobilePhoneNumber_2}"/>-
                                 <input type="text" class="number2" name="mobilePhoneNumber_3" th:value="${form.mobilePhoneNumber_3}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
-                            <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
+                            <div class="field" th:classappend="${form.hasErrors('emailAddress2')} ? 'error'">
                                 <label>メールアドレス</label>
+                                <p th:text="${form.getErrors('emailAddress')}" th:if="${form.hasErrors('emailAddress')}"></p>
+                                <p th:text="${form.getErrors('emailAddress2')}" th:if="${form.hasErrors('emailAddress2')}"></p>
                                 <input type="text" class="number2" name="emailAddress" th:value="${form.emailAddress}"/>@
                                 <input type="text"  class="number2" name="emailAddress2" th:value="${form.emailAddress2}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('spouse')} ? 'error'">
                                 <label>配偶者有無</label>
+                                <p th:text="${form.getErrors('spouse')}" th:if="${form.hasErrors('spouse')}"></p>
                                 <input type="radio" name="spouse" value="1" th:checked="${form.spouse}=='1'"/>配偶者あり
                                 <input type="radio" name="spouse" value="0" th:checked="${form.spouse}=='0'"/>配偶者なし
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('houseClassification')} ? 'error'">
                                 <label>お住まい</label>
+                                <p th:text="${form.getErrors('houseClassification')}" th:if="${form.hasErrors('houseClassification')}"></p>
                                 <input type="radio" name="houseClassification" value="自己所有" th:checked="${form.houseClassification}=='自己所有'"/>本人名義の一戸建・マンション
                                 <input type="radio" name="houseClassification" value="家族所有" th:checked="${form.houseClassification}=='家族所有'"/>家族名義の一戸建・マンション
                                 <input type="radio" name="houseClassification" value="社宅" th:checked="${form.houseClassification}=='社宅'"/>社宅
@@ -245,14 +270,17 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('debt')} ? 'error'">
                                 <label>ローン等のお借り入れ金額</label>
+                                <p th:text="${form.getErrors('debt')}" th:if="${form.hasErrors('debt')}"></p>
                                 <input type="text" class="number" name="debt" th:value="${form.debt}"/><span class="unit">万円</span>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('income')} ? 'error'">
                                 <label>昨年の所得</label>
+                                <p th:text="${form.getErrors('income')}" th:if="${form.hasErrors('income')}"></p>
                                 <input type="text" class="number" name="income" th:value="${form.income}"/><span class="unit">万円</span>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('job')} ? 'error'">
                                 <label>ご職業</label>
+                                <p th:text="${form.getErrors('job')}" th:if="${form.hasErrors('job')}"></p>
                                 <input type="radio" name="job" value="経営自営" th:checked="${form.job}=='経営自営'"/>経営・自営業
                                 <input type="radio" name="job" value="会社員" th:checked="${form.job}=='会社員'"/>会社員
                                 <input type="radio" name="job" value="契約派遣" th:checked="${form.job}=='契約派遣'"/>契約・派遣社員

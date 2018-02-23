@@ -74,12 +74,12 @@ public class CardOrderForm extends FormBase {
 
     @NotBlank
     @Size(max = 13)
-    @Pattern(regexp = "^0[0-9]{4}$")
+    @Pattern(regexp = "^[0-9]{4}$")
     private String homePhoneNumber_3;
 
     @NotBlank
     @Size(max = 13)
-    @Pattern(regexp = "^[070|080|090]?$")
+    @Pattern(regexp = "^(070|080|090)$")
     private String mobilePhoneNumber_1;
 
     @NotBlank
@@ -94,12 +94,10 @@ public class CardOrderForm extends FormBase {
 
     @NotBlank
     @Size(max = 255)
-    @Email
     private String emailAddress;
 
     @NotBlank
     @Size(max = 255)
-    @Email
     private String emailAddress2;
 
     @NotBlank
