@@ -44,19 +44,7 @@
                                 <input type="text" class="number2" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
                                 <input type="text" class="number2" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
                             </div>
-                            <!--書き足し-->
 
-                            <div class="field" th:classappend="${form.hasErrors('alphabetName_l')} ? 'error'">
-                                <label>姓（ローマ字）</label>
-                                <input type="text" name="alphabetName_l" th:value="${form.alphabetName_l}"/>
-                            </div>
-
-                            <!--書き足し-->
-                            <div class="field" th:classappend="${form.hasErrors('alphabetName_f')} ? 'error'">
-                                <label>名（ローマ字）</label>
-                                <input type="text" name="alphabetName_f" th:value="${form.alphabetName_f}"/>
-                            </div>
-                            <!--書き足し-->
 
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別</label>
@@ -68,9 +56,6 @@
 
                             <div class=" field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日</label>
-
-
-
 
 
                                 <select name="birth_y" class="number3" lang="ja" style="background-color: rgb(255, 255, 255);"><option value="3003">1928年(昭和3年)</option>

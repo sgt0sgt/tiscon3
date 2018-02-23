@@ -16,22 +16,35 @@
                 <div class="center column">
                     <div class="ui segment metrixir">
                         <h1 class="ui aligned header teal">確認画面</h1>
-                        <form class="ui form" method="post" action="/cardOrder/">
+                            <form class="ui form" method="post" action="/cardOrder">
+
+                                <p th:text="#{home.welcome}">Welcome to our grocery store!</p>
+                                <p>Today is: <span th:text="${today}">13 february 2011</span>.</p>
+                                <p>Today is: <span th:text="${#calendars.format(today,'dd MMMM yyyy')}">13 May 2011</span></p>
+
 
 
                             <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
-                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_f}"/>
-                            <input type="hidden" name="kanjiName" th:value="${form.kanjiName_l}"/>
-                            <input type="hidden" name="kanaName" th:value="${form.kanaName_f}"/>
-                            <input type="hidden" name="kanaName" th:value="${form.kanaName_l}"/>
-                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_l}"/>
-                            <input type="hidden" name="alphabetName" th:value="${form.alphabetName_f}"/>
+                            <input type="hidden" name="kanjiName_F" th:value="${form.kanjiName_F}"/>
+                            <input type="hidden" name="kanjiName_L" th:value="${form.kanjiName_L}"/>
+                            <input type="hidden" name="kanaName_F" th:value="${form.kanaName_F}"/>
+                            <input type="hidden" name="kanaName_L" th:value="${form.kanaName_L}"/>
+                            <input type="hidden" name="alphabetName_L" th:value="${form.alphabetName_L}"/>
+                            <input type="hidden" name="alphabetName_F" th:value="${form.alphabetName_F}"/>
+
                             <input type="hidden" name="gender" th:value="${form.gender}"/>
                             <input type="hidden" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
                             <input type="hidden" name="zipCode" th:value="${form.zipCode}"/>
                             <input type="hidden" name="address" th:value="${form.address}"/>
-                            <input type="hidden" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
-                            <input type="hidden" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+
+                            <input type="hidden" name="homePhoneNumber_1" th:value="${form.homePhoneNumber_1}"/>
+                                <input type="hidden" name="homePhoneNumber_2" th:value="${form.homePhoneNumber_2}"/>
+                                <input type="hidden" name="homePhoneNumber_3" th:value="${form.homePhoneNumber_3}"/>
+
+                            <input type="hidden" name="mobilePhoneNumber_1" th:value="${form.mobilePhoneNumber_1}"/>
+                                <input type="hidden" name="mobilePhoneNumber_2" th:value="${form.mobilePhoneNumber_2}"/>
+                                <input type="hidden" name="mobilePhoneNumber_3" th:value="${form.mobilePhoneNumber_3}"/>
+
                             <input type="hidden" name="emailAddress" th:value="${form.emailAddress}"/>
                             <input type="hidden" name="spouse" th:value="${form.spouse}"/>
                             <input type="hidden" name="houseClassification" th:value="${form.houseClassification}"/>

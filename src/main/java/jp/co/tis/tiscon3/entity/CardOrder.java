@@ -21,16 +21,26 @@ public class CardOrder {
     Long id;
 
     /**  */
-    @Column(name = "KANJI_NAME")
-    String kanjiName;
+    @Column(name = "KANJI_NAME_F")
+    String kanjiName_F;
+    /**  */
+    @Column(name = "KANJI_NAME_L")
+    String kanjiName_L;
 
     /**  */
-    @Column(name = "KANA_NAME")
-    String kanaName;
+    @Column(name = "KANA_NAME_F")
+    String kanaName_F;
+    /**  */
+    @Column(name = "KANA_NAME_L")
+    String kanaName_L;
 
     /**  */
-    @Column(name = "ALPHABET_NAME")
-    String alphabetName;
+    @Column(name = "ALPHABET_NAME_F")
+    String alphabetName_F;
+    /**  */
+    @Column(name = "ALPHABET_NAME_L")
+    String alphabetName_L;
+
 
     /**  */
     @Column(name = "DATE_OF_BIRTH")
@@ -49,12 +59,24 @@ public class CardOrder {
     String address;
 
     /**  */
-    @Column(name = "HOME_PHONE_NUMBER")
-    String homePhoneNumber;
+    @Column(name = "HOME_PHONE_NUMBER_1")
+    String homePhoneNumber_1;
+    /**  */
+    @Column(name = "HOME_PHONE_NUMBER_2")
+    String homePhoneNumber_2;
+    /**  */
+    @Column(name = "HOME_PHONE_NUMBER_3")
+    String homePhoneNumber_3;
 
     /**  */
-    @Column(name = "MOBILE_PHONE_NUMBER")
-    String mobilePhoneNumber;
+    @Column(name = "MOBILE_PHONE_NUMBER_1")
+    String mobilePhoneNumber_1;
+    /**  */
+    @Column(name = "MOBILE_PHONE_NUMBER_2")
+    String mobilePhoneNumber_2;
+    /**  */
+    @Column(name = "MOBILE_PHONE_NUMBER_3")
+    String mobilePhoneNumber_3;
 
     /**  */
     @Column(name = "EMAIL_ADDRESS")
@@ -143,8 +165,11 @@ public class CardOrder {
      *
      * @return the kanjiName
      */
-    public String getKanjiName() {
-        return kanjiName;
+    public String getKanjiName_F() {
+        return kanjiName_F;
+    }
+    public String getKanjiName_L() {
+        return kanjiName_L;
     }
 
     /**
@@ -152,8 +177,11 @@ public class CardOrder {
      *
      * @param kanjiName the kanjiName
      */
-    public void setKanjiName(String kanjiName) {
-        this.kanjiName = kanjiName;
+    public void setKanjiName_F(String kanjiName_F) {
+        this.kanjiName_F = kanjiName_F;
+    }
+    public void setKanjiName_L(String kanjiName_L) {
+        this.kanjiName_L = kanjiName_L;
     }
 
     /**
@@ -161,8 +189,11 @@ public class CardOrder {
      *
      * @return the kanaName
      */
-    public String getKanaName() {
-        return kanaName;
+    public String getKanaName_F() {
+        return kanaName_F;
+    }
+    public String getKanaName_L() {
+        return kanaName_L;
     }
 
     /**
@@ -170,8 +201,11 @@ public class CardOrder {
      *
      * @param kanaName the kanaName
      */
-    public void setKanaName(String kanaName) {
-        this.kanaName = kanaName;
+    public void setKanaName_F(String kanaName_F) {
+        this.kanaName_F = kanaName_F;
+    }
+    public void setKanaName_L(String kanaName_L) {
+        this.kanaName_L = kanaName_L;
     }
 
     /**
@@ -179,8 +213,11 @@ public class CardOrder {
      *
      * @return the alphabetName
      */
-    public String getAlphabetName() {
-        return alphabetName;
+    public String getAlphabetName_F() {
+        return alphabetName_F;
+    }
+    public String getAlphabetName_L() {
+        return alphabetName_L;
     }
 
     /**
@@ -188,8 +225,11 @@ public class CardOrder {
      *
      * @param alphabetName the alphabetName
      */
-    public void setAlphabetName(String alphabetName) {
-        this.alphabetName = alphabetName;
+    public void setAlphabetName_F(String alphabetName_F) {
+        this.alphabetName_F = alphabetName_F;
+    }
+    public void setAlphabetName_L(String alphabetName_L) {
+        this.alphabetName_L = alphabetName_L;
     }
 
     /**
@@ -269,17 +309,27 @@ public class CardOrder {
      *
      * @return the homePhoneNumber
      */
-    public String getHomePhoneNumber() {
-        return homePhoneNumber;
+    public String getHomePhoneNumber_1() {
+        return homePhoneNumber_1;
     }
+    public String getHomePhoneNumber_2() {
+        return homePhoneNumber_2;
+    }
+    public String getHomePhoneNumber_3() { return homePhoneNumber_3; }
 
     /**
      * Sets the homePhoneNumber.
      *
      * @param homePhoneNumber the homePhoneNumber
      */
-    public void setHomePhoneNumber(String homePhoneNumber) {
-        this.homePhoneNumber = homePhoneNumber;
+    public void setHomePhoneNumber_1(String homePhoneNumber_1) {
+        this.homePhoneNumber_1 = homePhoneNumber_1;
+    }
+    public void setHomePhoneNumber_2(String homePhoneNumber_2) {
+        this.homePhoneNumber_2 = homePhoneNumber_2;
+    }
+    public void setHomePhoneNumber_3(String homePhoneNumber_3) {
+        this.homePhoneNumber_3 = homePhoneNumber_3;
     }
 
     /**
@@ -287,8 +337,14 @@ public class CardOrder {
      *
      * @return the mobilePhoneNumber
      */
-    public String getMobilePhoneNumber() {
-        return mobilePhoneNumber;
+    public String getMobilePhoneNumber_1() {
+        return mobilePhoneNumber_1;
+    }
+    public String getMobilePhoneNumber_2() {
+        return mobilePhoneNumber_2;
+    }
+    public String getMobilePhoneNumber_3() {
+        return mobilePhoneNumber_3;
     }
 
     /**
@@ -296,8 +352,14 @@ public class CardOrder {
      *
      * @param mobilePhoneNumber the mobilePhoneNumber
      */
-    public void setMobilePhoneNumber(String mobilePhoneNumber) {
-        this.mobilePhoneNumber = mobilePhoneNumber;
+    public void setMobilePhoneNumber_1(String mobilePhoneNumber_1) {
+        this.mobilePhoneNumber_1 = mobilePhoneNumber_1;
+    }
+    public void setMobilePhoneNumber_2(String mobilePhoneNumber_2) {
+        this.mobilePhoneNumber_2 = mobilePhoneNumber_2;
+    }
+    public void setMobilePhoneNumber_3(String mobilePhoneNumber_3) {
+        this.mobilePhoneNumber_3 = mobilePhoneNumber_3;
     }
 
     /**
