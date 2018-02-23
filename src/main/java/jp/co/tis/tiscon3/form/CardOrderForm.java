@@ -11,31 +11,30 @@ public class CardOrderForm extends FormBase {
 
     @NotBlank
     @Size(max = 60)
-    private String kanjiName_f;
+    private String kanjiName_L;
 
     @NotBlank
     @Size(max = 60)
-    private String kanjiName_l;
+    private String kanjiName_F;
 
     @NotBlank
     @Size(max = 90)
     @Pattern(regexp = "^[ァ-ヶー 　]*$")
-    private String kanaName_f;
-
+    private String kanaName_L;
     @NotBlank
     @Size(max = 90)
     @Pattern(regexp = "^[ァ-ヶー 　]*$")
-    private String kanaName_l;
+    private String kanaName_F;
 
     @NotBlank
     @Size(max = 120)
     @Pattern(regexp = "^[a-zA-Z 　]*$")
-    private String alphabetName_f;
+    private String alphabetName_L;
 
     @NotBlank
-    @Size(max = 90)
-    @Pattern(regexp = "^[ァ-ヶー 　]*$")
-    private String alphabetName_l;
+    @Size(max = 120)
+    @Pattern(regexp = "^[a-zA-Z 　]*$")
+    private String alphabetName_F;
 
     @NotBlank
     @Size(max = 10)
@@ -68,6 +67,11 @@ public class CardOrderForm extends FormBase {
     @Size(max = 255)
     @Email
     private String emailAddress;
+
+    @NotBlank
+    @Size(max = 255)
+    @Email
+    private String emailAddress2;
 
     @NotBlank
     @Size(max = 20)
