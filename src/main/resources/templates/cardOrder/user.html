@@ -58,14 +58,14 @@
                                 <input type="radio" name="gender" value="male" th:checked="${form.gender}=='male'"/>男性
                                 <input type="radio" name="gender" value="female" th:checked="${form.gender}=='female'"/>女性
                             </div>
-<!--
+
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                     <label>生年月日</label>
                                     <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
-                                    -->
 
 
 
+<!--
                                 <div class=" field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                             <div class=" field" >
                                 <label>生年月日</label>
@@ -207,7 +207,7 @@
 
                             </div>
 
-
+-->
 
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号（例）123-4567</label>
@@ -246,7 +246,7 @@
                                 <label>メールアドレス</label>
                                 <p th:text="${form.getErrors('emailAddress')}" th:if="${form.hasErrors('emailAddress')}"></p>
                                 <p th:text="${form.getErrors('emailAddress2')}" th:if="${form.hasErrors('emailAddress2')}"></p>
-                                <input type="text" class="number2" name="emailAddress" th:value="${form.emailAddress}"/>@
+                                <input type="text" class="number2" name="emailAddress" th:value="${form.emailAddress}">@
                                 <input type="text"  class="number2" name="emailAddress2" th:value="${form.emailAddress2}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('spouse')} ? 'error'">
